@@ -1,0 +1,14 @@
+@mixin button($bg:$buttoncolorlight, $txt:$txtcolorlight) {
+  background-color: $bg;
+  height: 40px;
+  font-size: 18px;
+  color: $txt;
+}
+
+.button-light{
+  @include button($bg:$buttoncolorlight, $txt:$buttontxtlight);
+}
+
+.button-dark{
+  @include button($bg:$buttoncolordark, $txt:$buttontxtdark);
+}

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+@mixin card($bg:$bgcolorlight, $txt:$txtcolorlight) {
+  background-color: $bg;
+  color: $txt;
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 40px;
+    margin: 0;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+  img {
+    object-fit: cover;
+    margin: 20px;
+  }
+}
+
+.card-light {
+  @include card($bg:$bgcolorlight, $txt:$txtcolorlight);
+}
+
+.card-dark {
+  @include card($bg:$bgcolordark, $txt:$txtcolordark);
+}
